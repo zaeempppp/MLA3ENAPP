@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL MLA3EN🔥🖤</title>
+    <title>🔥 EL MLA3EN 🖤💀</title>
     <style>
         body {
             display: flex;
@@ -14,73 +14,92 @@
             font-family: Arial, sans-serif;
             flex-direction: column;
             text-align: center;
-        }.container {
-        background: rgba(255, 215, 0, 0.1);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px gold;
-    }
-
-    h1 {
-        font-size: 13px;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
-
-    select, button {
-        width: 100%;
-        padding: 10px;
-        font-size: 10px;
-        border: 2px solid gold;
-        background: black;
-        color: gold;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-
-    button:hover {
-        background: gold;
-        color: black;
-    }
-
-    #downloadLink {
-        display: none;
-        font-size: 10px;
-        margin-top: 15px;
-        font-weight: bold;
-    }
-</style>
-
+        }
+        .container {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px gold;
+        }
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        select, button {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border: 2px solid gold;
+            background: black;
+            color: gold;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        button:disabled {
+            background: gray;
+            color: darkgoldenrod;
+            cursor: not-allowed;
+        }
+        button:hover:enabled {
+            background: gold;
+            color: black;
+        }
+        #downloadLink {
+            display: none;
+            font-size: 14px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>EL MLA3EN🔥🖤</h1>
-        <h3>: MOHMED EL ZAEEM🖤<h3>
-          <h4>دعوتكم ل حازم الملعون</h4>
-        <label for="appSelect">اختر التطبيق الذي تريده من تطبيقات الملاعين</label>
-        <select id="appSelect">
-            <option value="">-- اختر التطبيق الذي تريده --</option>
-            <option value="admin">ادمن</option>
-            <option value="user">مستخدم</option>
-            <option value="format" data-link="https://mega.nz/file/dadlSZ7C#QN89oW4MhZHeKhNgksuRmWsXg1SCEa1oSkyK9RXL0PU">فورمات الهاتف</option>
-            <option value="image-grab">سحب صور</option>
-            <option value="fake-numbers">موقع ارقام فيك</option>
+        <h1>🔥 EL MLA3EN 🖤💀</h1>
+        <h3>👑 MOHMED EL ZAEEM 🖤🔥</h3>
+        <h4>⚡ دعوتكم لـ حازم الملعون ☠️🔥</h4>
+        <label for="appSelect">👇 اختر التطبيق الذي تريده من تطبيقات الملاعين 👇</label>
+        <select id="appSelect" onchange="toggleButton()">
+            <option value="">-- 🚀 اختر التطبيق الذي ترده الان--</option>
+            <option value="vpn" data-link="https://protonvpn.com/">🔒 VPN مجاني</option>
+            <option value="tor" data-link="https://www.torproject.org/download/">🌑 متصفح الدارك ويب</option>
+            <option value="privacy-tool" data-link="https://www.privacytools.io/">🛡️ أداة لحماية الخصوصية</option>
+            <option value="secure-email" data-link="https://tutanota.com/">📧 بريد إلكتروني مشفر</option>
+            <option value="password-manager" data-link="https://bitwarden.com/">🔑 مدير كلمات المرور</option>
+            <option value="encrypted-chat" data-link="https://signal.org/">💬 تطبيق محادثة مشفر</option>
+            <option value="anonymous-search" data-link="https://duckduckgo.com/">🔍 محرك بحث آمن</option>
+            <option value="file-encryption" data-link="https://www.veracrypt.fr/">🗄️ تشفير الملفات</option>
+            <option value="ad-blocker" data-link="https://ublockorigin.com/">🚫 مانع إعلانات</option>
+            <option value="format" data-link="https://mega.nz/file/dadlSZ7C#QN89oW4MhZHeKhNgksuRmWsXg1SCEa1oSkyK9RXL0PU">📱 فورمات الهاتف</option>
+            <option value="image-grab" data-link="https://mega.nz/file/sWUgXJiA#7Czg9VHGXw0cvCbLExVrPT8rFH6S7wvYN_3k58L2zzo">📸 سحب صور</option>
+            <option value="fake-numbers" data-link="https://receive-smss.live/?lang=ar">📞 موقع أرقام فيك</option>
+            <option value="crypto-wallet" data-link="https://www.exodus.com/">💰 محفظة عملات رقمية</option>
         </select>
-        <button onclick="showLink()">تحميل</button>
+        <button id="downloadBtn" onclick="showLink()" disabled>⚡ تحميل</button>
         <div id="downloadLink"></div>
     </div><script>
+    function toggleButton() {
+        const select = document.getElementById("appSelect");
+        const button = document.getElementById("downloadBtn");
+        button.disabled = select.value === "";
+    }
+
     function showLink() {
-        const appSelect = document.getElementById("appSelect").value;
+        const appSelect = document.getElementById("appSelect");
         const downloadLink = document.getElementById("downloadLink");
-        if (appSelect) {
-            const selectedOption = document.querySelector(`#appSelect option[value='${appSelect}']`);
-            const link = selectedOption ? selectedOption.getAttribute('data-link') : '#';
-            downloadLink.innerHTML = `<a href=\"${link}\" style="color: gold; text-decoration: none;">تحميل ${appSelect}</a>`;
+        const selectedOption = appSelect.options[appSelect.selectedIndex];
+        const link = selectedOption.getAttribute("data-link");
+
+        if (link) {
+            downloadLink.innerHTML = `<a href="${link}" target="_blank" style="color: gold; text-decoration: none;">⚡ تحميل ${selectedOption.text} ⚡</a>`;
             downloadLink.style.display = "block";
         } else {
             downloadLink.style.display = "none";
